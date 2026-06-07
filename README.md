@@ -1,5 +1,14 @@
 # Dockerfile-security
 
+## Les mesures de sécurité :
+
+- User : nginx sans privilèges
+- Port exposé 8080
+- Limites de mémoire 128m
+- Limites de cpus : 0.5
+- Limites de processus : 50
+- Activation des services nécéssaires uniquement avec cap-drop ALL
+
 ### Le script
 
 Voici le launcher du container :
