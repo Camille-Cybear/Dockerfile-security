@@ -18,7 +18,7 @@ docker run -d \
 
 ### Le dockerfile
 
-Il comptient :
+Il contient :
 
 ```bash
 # On appelle une image nginx sans privileges : nativement non-root, changement du port d'exposition
