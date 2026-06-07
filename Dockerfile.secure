@@ -1,0 +1,13 @@
+# On appelle une image nginx sans privileges : nativement non-root, changement du port d'exposition
+FROM nginxinc/nginx-unprivileged:1.30-alpine3.23
+#Passage temporaire en root pour lancer les MAJ
+USER root
+#Lancement des MAJ
+RUN apk update && apk upgrade
+#Passage en utilisateur nginx non-root
+USER nginx
+#Copie de la page web
+COPY index.html /usr/share/nginx/html/
+#Signalement du ort d'exposition passant à 8080 au lieu de 80
+EXPOSE 8080
+
